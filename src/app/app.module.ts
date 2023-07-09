@@ -60,6 +60,7 @@ import { environment } from 'src/environments/environment';
     // AngularFireModule.initializeApp(environment.firebase2),
     // AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    NgbModule,
     
     // Specify ng-circle-progress as an import
     NgCircleProgressModule.forRoot({

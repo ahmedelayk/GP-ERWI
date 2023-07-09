@@ -33,13 +33,15 @@
                         <label for="address" class="form-label">Address</label>
                         <input #address type="text" class="form-control" name="address" id="address" [value]="userData?.adress">
                     </div>
-                    <div class="mb-3 form-group">
-                        <label for="city" class="form-label">City</label>
-                        <input #city type="text" class="form-control" name="city" id="city" [value]="userData?.city">
-                    </div>
-                    <div class="mb-3 form-group">
-                        <label for="" class="form-label">Zip Code</label>
-                        <input #zip type="number" class="form-control" name="zip-code" id="zip-code" [value]="userData?.zipCode">
+                    <div class="row">
+                        <div class="mb-3 form-group col-7">
+                            <label for="city" class="form-label">City</label>
+                            <input #city type="text" class="form-control" name="city" id="city" [value]="userData?.city">
+                        </div>
+                        <div class="mb-3 form-group col-5">
+                            <label for="" class="form-label">Zip Code</label>
+                            <input #zip type="number" class="form-control" name="zip-code" id="zip-code" [value]="userData?.zipCode">
+                        </div>
                     </div>
     
                 </section>
@@ -106,19 +108,19 @@
                         <h3>Payment</h3>
                     </div>
                     <form >
-                        <p class="fw-bold mb-4 pb-2">Saved cards:</p>
+                        <p class="fw-bold mb-1 pb-2">Saved cards:</p>
 
                         <div class="row ">
 
-                            <div class="d-flex align-items-center align-items-center col-6">
+                            <div class="d-flex align-items-center align-items-center col-6 mb-2">
                                 <!-- <img class="img-fluid" src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /> -->
-                                <label class="form-label pe-2" for="paypal">PayPal</label>
+                                <label class="pe-2" for="paypal">PayPal</label>
                                 <input type="radio" id="paypal" name="v" />
                             </div>
 
                             <div class="d-flex align-items-center align-items-center col-6">
                                 <!-- <img class="img-fluid" src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /> -->
-                                <label class="form-label pe-2" for="visa">VISA</label>
+                                <label class="pe-2" for="visa">VISA</label>
                                 <input type="radio" id="visa" name="v" />
                             </div>
                             <!-- <div class="d-flex flex-row align-items-center mb-4 pb-1">
@@ -155,19 +157,20 @@
                                 </div>
                             </div>
                             <div class=" row">
-                                <div class="form-outline">
+
+                                <div class="form-outline col-7">
                                     <label class="form-label" for="formControlLgExpk">Expire</label>
                                     <input #exyear type="number" id="formControlLgExpk" class="form-control"
                                         placeholder="MM/YYYY"  />
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-outline">
+                                
+                                <div class="form-outline col-5">
                                     <label class="form-label" for="formControlLgcvv">Cvv</label>
                                     <input #cvv type="number" id="formControlLgcvv" class="form-control" placeholder=""
-                                       />
+                                    />
                                 </div>
                             </div>
+
                         </div>
 
                         <button type="submit" (click)="checkoutaction(name.value,month.value,cardNumber.value,exyear.value,cvv.value)" class="btn btn-success btn-lg btn-block">Pay</button>

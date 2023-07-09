@@ -46,5 +46,8 @@ return this.http.post(`${this.api}register`, Data)
   review(newReview: any){
     return this.http.post("https://localhost:44371/Reviews", newReview);
   }
+  getReviews(){
+    return this.http.get("https://localhost:44371/Reviews");
+  }
       
 }

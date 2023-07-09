@@ -10,8 +10,10 @@ export class HomeComponent implements OnInit {
   constructor(public user:UserapiService) { }
 
   ngOnInit(): void {
+    this.reviews = this.user.getReviews().subscribe();
   }
 
+  reviews: any = {};
   popup: boolean = false;
   starRating: number = 0;
   review: any;
@@ -20,9 +22,10 @@ export class HomeComponent implements OnInit {
     console.log(user);
     console.log(comment);
     this.popup = false;
-    this.user.review({user, comment}).subscribe(res => {
+    this.user.review({user, comment,rating:this.starRating}).subscribe(res => {
       console.log(res);
     })
   }
-  
+
+   
 }

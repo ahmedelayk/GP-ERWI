@@ -24,7 +24,7 @@ export class DashboardComponent implements OnInit {
             console.log(data);
             this.dataFromFirebase = data;
         });
-        this.userFromDb = this.user.getUser();
+        this.userFromDb = this.user.getUser().subscribe();
         // this.userFromDb = {fName:'ahmed', sName: "ali"}
     }
 

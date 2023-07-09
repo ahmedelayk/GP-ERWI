@@ -180,7 +180,7 @@ textarea.form-control {
 
 ngb-rating {
     color: #FFC107;
-    font-size: 50px;
+    font-size: 2rem;
 }
 
 
@@ -191,4 +191,11 @@ ngb-rating {
 
 .hardware_component .card {
     min-height: 350px;
+}
+
+
+@media (max-width: 991px) {
+    .rev-card {
+        min-height: 410px
+    }
 }

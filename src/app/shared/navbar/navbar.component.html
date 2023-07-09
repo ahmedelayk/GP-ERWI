@@ -6,11 +6,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" aria-current="page" routerLink="">Home</a>
+        <li class="nav-item ">
+          <a class="nav-link color" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" aria-current="page" routerLink="">Home</a>
         </li>
         
-        <li class="nav-item">
+        <li class="nav-item color">
           <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/checkout">Checkout</a>
         </li>
       
@@ -39,9 +39,9 @@
               />
             </a>
             <ul ngbDropdownMenu class="dropdown-menu" class="drop-menu"  aria-labelledby="navbarDropdownMenuLink">
-              <li>
-                <a class="dropdown-item" routerLink="/myaccount">My profile</a>
-              </li>
+              <!-- <li>
+                <a class="dropdown-item" routerLink="/dashboard">My profile</a>
+              </li> -->
               <li>
                 <a class="dropdown-item" routerLink="/dashboard">Dashboard </a>
               </li>
@@ -49,7 +49,7 @@
                 <a class="dropdown-item" routerLink="/login">Sign In </a>
               </li>
               <li>
-                <a class="dropdown-item" routerLink="/register">Register</a>
+                <a class="dropdown-item" routerLink="/checkout">Register</a>
               </li>
               <li>
                 <a class="dropdown-item" (click)=" LogOutHandler()">Logout</a>
