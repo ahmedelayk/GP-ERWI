@@ -8,12 +8,12 @@ import { UserapiService } from 'src/app/services/userapi.service';
 export class HomeComponent implements OnInit {
 
   constructor(public user:UserapiService) { }
-
+  
+  reviews: any = {};
   ngOnInit(): void {
     this.reviews = this.user.getReviews().subscribe();
   }
 
-  reviews: any = {};
   popup: boolean = false;
   starRating: number = 0;
   review: any;
@@ -26,6 +26,5 @@ export class HomeComponent implements OnInit {
       console.log(res);
     })
   }
-
    
 }
