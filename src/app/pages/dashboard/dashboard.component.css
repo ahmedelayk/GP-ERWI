@@ -1,0 +1,208 @@
+.dashboard {
+    display: flex;
+}
+
+aside {
+    background-color: teal;
+    color: white;
+    padding: 20px;
+    height: calc(100vh - 57px);
+    width: 20%;
+}
+
+aside .links li {
+    margin-bottom: 15px;
+}
+
+aside .links li a {
+    background-color: rgb(92, 183, 183);
+    padding: 10px 8px;
+    border-radius: 8px;
+    text-align: center;
+    transition: .3s;
+}
+
+aside .links li a:hover {
+    background-color: rgb(84, 165, 165);
+
+}
+
+.chat {
+    background-color: darkslategray;
+}
+
+/* Gloabal */
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Gloabal */
+
+/* Start Content*/
+.content {
+    flex: 1 1 auto;
+    padding: 40px 30px;
+}
+
+.content .weather {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.content .weather div {
+    padding: 10px;
+    border: 1px solid rebeccapurple;
+    border-radius: 8px;
+}
+
+.content .measures {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* End Content*/
+
+
+/* start progress */
+.progress-text {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress-circle {
+    position: relative;
+
+}
+
+.progress-circle:before {
+    content: attr(data-title);
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress-container {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* end progress */
+
+/* Start Chat*/
+.chat {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.chat .chat-title {
+    background-color: teal;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+.chat-title h2 {
+    margin-bottom: 0;
+}
+
+.chat-container {
+    padding: 10px;
+    flex: 1;
+}
+
+.chat-container .message-container {
+    margin-bottom: 10px;
+}
+
+.chat-container .message-container .username {
+    color: white;
+    font-size: 1.2rem;
+
+}
+
+.chat-container .message-container.user1 .message {
+    background-color: white;
+    font-size: 1rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: fit-content;
+    margin-left: 10px;
+    margin-top: 8px;
+    position: relative;
+}
+.chat-container .message-container.user2 .message {
+    background-color: white;
+    font-size: 1rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: fit-content;
+    margin-right: 10px;
+    margin-top: 8px;
+    position: relative;
+}
+.chat-container .message-container.user1 .message:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -9px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+}
+
+.user2 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.chat-container .message-container.user2 .message:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -9px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+}
+
+.chat-input {
+    display: flex;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 15px 10px;
+    width: 100%;
+    border: 1px solid darkslategray;
+
+}
+.chat-input input:focus-visible {
+    outline: none;
+}
+
+/* End Chat*/
+
+
+
+/* Start Profile Settings */
+.profile-settings {
+    flex: 1 1 auto;
+    padding: 40px 30px;
+}
+
+/* End Profile Settings */

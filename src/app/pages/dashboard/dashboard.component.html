@@ -1,0 +1,140 @@
+<section class="dashboard">
+    <aside>
+        <h1>Erwy</h1>
+        <ul class="links">
+            <li>
+                <a class="dropdown-item" (click)="handleDashboardLink()" >Dashboard</a>
+            <li>
+                <a class="dropdown-item" (click)="handleSettingsLink()" >Profile Settings</a>
+            </li>
+        </ul>
+    </aside>
+    <div class="content" *ngIf="dashboardFlag">
+        <div class="weather">
+            <div>{{dataFromFirebase.temperature}} Weather</div>
+            <div>18 Soil Temp</div>
+        </div>
+        <div class="measures">
+
+            <div class="progress-container">
+                <circle-progress class="progress-circle" [percent]="dataFromFirebase.moisture"
+                [outerStrokeColor]="'hotpink'"
+                [innerStrokeColor]="'pink'"
+                [animation]="true"
+                [animationDuration]="300"
+                [showSubtitle] = false
+                data-title="moisture"
+                >
+            </circle-progress>
+            </div>
+            <div class="progress-container">
+                <circle-progress class="progress-circle" [percent]="dataFromFirebase.waterflow"
+                [outerStrokeColor]="'hotpink'"
+                [innerStrokeColor]="'pink'"
+                [animation]="true"
+                [animationDuration]="300"
+                [showSubtitle] = false
+                data-title="waterflow"
+                >
+            </circle-progress>
+            </div>
+
+            <div class="progress-container">
+                <circle-progress class="progress-circle" [percent]="dataFromFirebase.temperature"
+                [outerStrokeColor]="'hotpink'"
+                [innerStrokeColor]="'pink'"
+                [animation]="true"
+                [animationDuration]="300"
+                [showSubtitle] = false
+                data-title="temperature"
+                >
+            </circle-progress>
+            </div>
+            <div class="progress-container">
+                <circle-progress class="progress-circle" [percent]="dataFromFirebase.humidity"
+                [outerStrokeColor]="'hotpink'"
+                [innerStrokeColor]="'pink'"
+                [animation]="true"
+                [animationDuration]="300"
+                [showSubtitle] = false
+                data-title="humidity"
+                >
+            </circle-progress>
+            </div>
+
+        </div>
+    </div>
+    <div class="profile-settings" *ngIf="settingsFlag" > 
+        <h1>Profile Settings</h1>
+        <div class="form-container">
+            <form action="">
+
+                <div class="row" >
+                    <div class="mb-3 col-6">
+                        <label for="fName" class="form-label">First Name</label>
+                        <input #fName type="text" name="fName" id="fName" class="form-control" placeholder="">
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="lName" class="form-label">Last Name</label>
+                        <input #lName type="text" name="lName" id="lName" class="form-control" placeholder="">
+                    </div>
+                </div>
+                <div class="mb-3 form-group">
+                    <label for="" class="form-label">Email</label>
+                    <input #email type="email" class="form-control" name="email" id="email" placeholder="abc@mail.com">
+                </div>
+                <div class="mb-3 form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input #pass type="password" class="form-control" name="password" id="password">
+                </div>
+                <div class="mb-3 form-group">
+                    <label for="address" class="form-label">Address</label>
+                    <input #adress type="text" class="form-control" name="address" id="address">
+                </div>
+                <div class="row" >
+                    <div class="mb-3 form-group col-7">
+                        <label for="city" class="form-label">City</label>
+                        <input #city type="text" class="form-control" name="city" id="city">
+                    </div>
+                    <div class="mb-3 form-group col-5">
+                        <label for="" class="form-label">Zip Code</label>
+                        <input #zipCode type="number" class="form-control" name="zip-code" id="zip-code">
+                    </div>
+
+                </div>
+
+                <div class="mb-3 form-group">
+                    <input class=" btn btn-success" type="submit" name="submit" id="submit" value="Submit" (click)="editProfile(fName.value, lName.value, email.value, pass.value, adress.value, city.value, zipCode.value)">
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="chat">
+        <div class="chat-title">
+            <h2>chat with mobile app</h2>
+        </div>
+        <div class="chat-container">
+            <div class="message-container user1">
+                <div class="username">ahmed</div>
+                <div class="message">message</div>
+            </div>
+            <div class="message-container user2">
+                <div class="username">mohamed</div>
+                <div class="message">message 2</div>
+            </div>
+            <div class="message-container user1">
+                <div class="username">ahmed</div>
+                <div class="message">message</div>
+            </div>
+            <div class="message-container user2">
+                <div class="username">mohamed</div>
+                <div class="message">messmessage 2age</div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="write a message">
+            <button class="chat-btn btn btn-primary">send</button>
+        </div>
+    </div>
+</section>

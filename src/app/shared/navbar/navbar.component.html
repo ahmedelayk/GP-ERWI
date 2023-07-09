@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" aria-current="page" routerLink="">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/checkout">Checkout</a>
+        </li>
+      
+      
+        
+      </ul>
+      
+      <div class="d-flex align-items-center " style="margin-right: 50px;">
+        <ul class="navbar-nav">
+          <!-- Avatar -->
+
+          <li ngbDropdown class="nav-item dropdown" >
+            <a
+              class="nav-link dropdown-toggle d-flex align-items-center"
+              id="navbarDropdownMenuLink"
+              role="button"
+              ngbDropdownToggle
+              aria-expanded="false"
+            >
+              <img
+              src='https://th.bing.com/th/id/OIP.9khtmooKvy2vTJwoG4jRUAHaHP?w=197&h=193&c=7&r=0&o=5&dpr=1.3&pid=1.7'  
+                class="rounded-circle"
+                height="25"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+            <ul ngbDropdownMenu class="dropdown-menu" class="drop-menu"  aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" routerLink="/myaccount">My profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/dashboard">Dashboard </a>
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/login">Sign In </a>
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/register">Register</a>
+              </li>
+              <li>
+                <a class="dropdown-item" (click)=" LogOutHandler()">Logout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+     
+  
+      
+     
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,186 @@
+<!-- Credit card form -->
+<!-- <div class="card-header py-3">
+    <h3 class="mb-0 text-center">Checkout Page </h3>
+</div> -->
+<div class="container">
+    <main class="checkout-main row">
+        <form action="" class="col-8">
+            <div class="row">
+
+                <section class="sign-up col-md-6">
+    
+                    <div class="mb-3">
+                        <label for="fName" class="form-label">First Name</label>
+                        <input #fName type="text" name="fName" id="fName" class="form-control" placeholder="" [value]="userData.fName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lName" class="form-label">Last Name</label>
+                        <input #lName type="text" name="lName" id="lName" class="form-control" placeholder="" [value]="userData.sName">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label for="" class="form-label">Email</label>
+                        <input #email type="email" class="form-control" name="email" id="email" placeholder="abc@mail.com" [value]="userData.email">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input #password type="password" class="form-control" name="password" id="password" [value]="userData.pass">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label for="password" class="form-label">Confirm Password</label>
+                        <input #conpassword type="password" class="form-control" name="conpassword" id="password" [value]="userData.conpass">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label for="address" class="form-label">Address</label>
+                        <input #address type="text" class="form-control" name="address" id="address" [value]="userData.adress">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label for="city" class="form-label">City</label>
+                        <input #city type="text" class="form-control" name="city" id="city" [value]="userData.city">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label for="" class="form-label">Zip Code</label>
+                        <input #zip type="number" class="form-control" name="zip-code" id="zip-code" [value]="userData.zipCode">
+                    </div>
+    
+                </section>
+    
+    
+                <section class="choose-planet col-md-6 px-5 mt-5">
+                    <div class="form-check d-flex justify-content-between">
+                        <input #apple class="form-check-input" type="checkbox" value="apple" [name]="userData.plants" id="apple">
+                        <label class="form-check-label" for="apple">
+                            Apple
+                        </label>
+                    </div>
+                    <div class="form-check d-flex justify-content-between">
+                        <input #tomato class="form-check-input" type="checkbox" value="tomato" [name]="userData.plants" id="tomato">
+                        <label class="form-check-label" for="tomato">
+                            Tomato
+                        </label>
+                    </div>
+                    <div class="form-check d-flex justify-content-between">
+                        <input #pepper class="form-check-input" type="checkbox" value="pepper" [name]="userData.plants" id="pepper">
+                        <label class="form-check-label" for="pepper">
+                            Pepper
+                        </label>
+                    </div>
+                    <div class="form-check d-flex justify-content-between">
+                        <input #graps class="form-check-input" type="checkbox" value="graps" [name]="userData.plants" id="graps">
+                        <label class="form-check-label" for="graps">
+                            Graps
+                        </label>
+                    </div>
+                    <div class="form-check d-flex justify-content-between mb-5">
+                        <input #mango class="form-check-input" type="checkbox" value="mango" [name]="userData.plants" id="mango">
+                        <label class="form-check-label" for="mango">
+                            Mango
+                        </label>
+                    </div>
+    
+                    <div class="mb-3 form-group">
+                        <label  for="space-of-lands" class="form-label">Space of lands</label>
+                        <input #space type="email" class="form-control" name="space-of-lands" id="space-of-lands" [value]="userData.space">
+                    </div>
+    
+                    <div class="mb-3 form-group">
+                        <label  for="total-cost" class="form-label">Total cost</label>
+                        <input type="text" class="form-control" name="total-cost" id="total-cost" [(ngModel)]="cost">
+                    </div>
+    
+                    <div class="mb-3 form-group">
+                        <input class=" btn btn-success" type="submit" name="submit" id="submit" value="Submit" (click)="confirmData(fName.value, lName.value, email.value, password.value, conpassword.value, address.value, city.value, zip.value, space.value, mango.checked)">
+                    </div>
+    
+                </section>
+            </div>
+        </form>
+
+        <section class="payment col-md-4">
+
+            <!-- Credit card form -->
+
+            <div class="card rounded-3">
+                <div class="card-body p-4">
+                    <div class="text-center mb-4">
+                        <h3></h3>
+                        <h3>Payment</h3>
+                    </div>
+                    <form >
+                        <p class="fw-bold mb-4 pb-2">Saved cards:</p>
+
+                        <div class="row ">
+
+                            <div class="d-flex align-items-center align-items-center col-6">
+                                <!-- <img class="img-fluid" src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /> -->
+                                <label class="form-label pe-2" for="paypal">PayPal</label>
+                                <input type="radio" id="paypal" name="v" />
+                            </div>
+
+                            <div class="d-flex align-items-center align-items-center col-6">
+                                <!-- <img class="img-fluid" src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /> -->
+                                <label class="form-label pe-2" for="visa">VISA</label>
+                                <input type="radio" id="visa" name="v" />
+                            </div>
+                            <!-- <div class="d-flex flex-row align-items-center mb-4 pb-1">
+                            <img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
+                            <div class="flex-fill mx-3">
+                                <div class="form-outline">
+                                    <label class="form-label p-5" for="visa">VISA</label>
+                                    <input type="radio" id="visa" name="v" />
+                                </div>
+                            </div>
+                        </div> -->
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="formControlLgXsd">Cardholder's
+                                Name</label>
+
+                            <input #name type="text" id="formControlLgXsd" class="form-control" value=""
+                                 />
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="formControlLgXsd">Month </label>
+
+                            <input #month type="text" id="formControlLgXsd" class="form-control" value=""
+                               />
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-7">
+                                <div class="form-outline">
+                                    <label class="form-label" for="formControlLgXM">Card Number
+                                        <input #cardNumber type="number" id="formControlLgXM" class="form-control" value=""
+                                             />
+
+                                    </label>
+                                </div>
+                            </div>
+                            <div class=" row">
+                                <div class="form-outline">
+                                    <label class="form-label" for="formControlLgExpk">Expire</label>
+                                    <input #exyear type="number" id="formControlLgExpk" class="form-control"
+                                        placeholder="MM/YYYY"  />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-outline">
+                                    <label class="form-label" for="formControlLgcvv">Cvv</label>
+                                    <input #cvv type="number" id="formControlLgcvv" class="form-control" placeholder=""
+                                       />
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" (click)="checkoutaction(name.value,month.value,cardNumber.value,exyear.value,cvv.value)" class="btn btn-success btn-lg btn-block">Pay</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Credit card form -->
+        </section>
+    </main>
+    <section>
+
+    </section>
+    <!-- Credit card form -->
+
+
+</div>
