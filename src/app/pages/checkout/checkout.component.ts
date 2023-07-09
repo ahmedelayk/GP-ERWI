@@ -25,6 +25,7 @@ export class CheckoutComponent implements OnInit {
 
   userData: any;
   cost: number = 0;
+  
   ngOnInit(): void {
     this.payment= this.fb.group({
       // id:new FormControl('',[ Validators.required , Validators.minLength(10)]) ,
@@ -62,7 +63,7 @@ export class CheckoutComponent implements OnInit {
  
 
   confirmData(fName:any, lName:any, email:any, password:any, conpassword:any, address:any, city:any, zip: any,  space:any, mango:any) {
-    this.cost =  space * 120
+    this.cost =  space
     this.user.signup({fName,sName: lName, email, pass:password, conpass:conpassword, adress:address, city, zipCode:zip, space:space, plants: "mango"}).subscribe();
   }
 

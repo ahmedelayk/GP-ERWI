@@ -11,35 +11,35 @@
     
                     <div class="mb-3">
                         <label for="fName" class="form-label">First Name</label>
-                        <input #fName type="text" name="fName" id="fName" class="form-control" placeholder="" [value]="userData.fName">
+                        <input #fName type="text" name="fName" id="fName" class="form-control" placeholder="" [value]="userData?.fName">
                     </div>
                     <div class="mb-3">
                         <label for="lName" class="form-label">Last Name</label>
-                        <input #lName type="text" name="lName" id="lName" class="form-control" placeholder="" [value]="userData.sName">
+                        <input #lName type="text" name="lName" id="lName" class="form-control" placeholder="" [value]="userData?.sName">
                     </div>
                     <div class="mb-3 form-group">
                         <label for="" class="form-label">Email</label>
-                        <input #email type="email" class="form-control" name="email" id="email" placeholder="abc@mail.com" [value]="userData.email">
+                        <input #email type="email" class="form-control" name="email" id="email" placeholder="abc@mail.com" [value]="userData?.email">
                     </div>
                     <div class="mb-3 form-group">
                         <label for="password" class="form-label">Password</label>
-                        <input #password type="password" class="form-control" name="password" id="password" [value]="userData.pass">
+                        <input #password type="password" class="form-control" name="password" id="password" [value]="userData?.pass">
                     </div>
                     <div class="mb-3 form-group">
                         <label for="password" class="form-label">Confirm Password</label>
-                        <input #conpassword type="password" class="form-control" name="conpassword" id="password" [value]="userData.conpass">
+                        <input #conpassword type="password" class="form-control" name="conpassword" id="password" [value]="userData?.conpass">
                     </div>
                     <div class="mb-3 form-group">
                         <label for="address" class="form-label">Address</label>
-                        <input #address type="text" class="form-control" name="address" id="address" [value]="userData.adress">
+                        <input #address type="text" class="form-control" name="address" id="address" [value]="userData?.adress">
                     </div>
                     <div class="mb-3 form-group">
                         <label for="city" class="form-label">City</label>
-                        <input #city type="text" class="form-control" name="city" id="city" [value]="userData.city">
+                        <input #city type="text" class="form-control" name="city" id="city" [value]="userData?.city">
                     </div>
                     <div class="mb-3 form-group">
                         <label for="" class="form-label">Zip Code</label>
-                        <input #zip type="number" class="form-control" name="zip-code" id="zip-code" [value]="userData.zipCode">
+                        <input #zip type="number" class="form-control" name="zip-code" id="zip-code" [value]="userData?.zipCode">
                     </div>
     
                 </section>
@@ -47,31 +47,31 @@
     
                 <section class="choose-planet col-md-6 px-5 mt-5">
                     <div class="form-check d-flex justify-content-between">
-                        <input #apple class="form-check-input" type="checkbox" value="apple" [name]="userData.plants" id="apple">
+                        <input #apple class="form-check-input" type="checkbox" value="apple" [name]="userData?.plants" id="apple">
                         <label class="form-check-label" for="apple">
                             Apple
                         </label>
                     </div>
                     <div class="form-check d-flex justify-content-between">
-                        <input #tomato class="form-check-input" type="checkbox" value="tomato" [name]="userData.plants" id="tomato">
+                        <input #tomato class="form-check-input" type="checkbox" value="tomato" [name]="userData?.plants" id="tomato">
                         <label class="form-check-label" for="tomato">
                             Tomato
                         </label>
                     </div>
                     <div class="form-check d-flex justify-content-between">
-                        <input #pepper class="form-check-input" type="checkbox" value="pepper" [name]="userData.plants" id="pepper">
+                        <input #pepper class="form-check-input" type="checkbox" value="pepper" [name]="userData?.plants" id="pepper">
                         <label class="form-check-label" for="pepper">
                             Pepper
                         </label>
                     </div>
                     <div class="form-check d-flex justify-content-between">
-                        <input #graps class="form-check-input" type="checkbox" value="graps" [name]="userData.plants" id="graps">
+                        <input #graps class="form-check-input" type="checkbox" value="graps" [name]="userData?.plants" id="graps">
                         <label class="form-check-label" for="graps">
                             Graps
                         </label>
                     </div>
                     <div class="form-check d-flex justify-content-between mb-5">
-                        <input #mango class="form-check-input" type="checkbox" value="mango" [name]="userData.plants" id="mango">
+                        <input #mango class="form-check-input" type="checkbox" value="mango" [name]="userData?.plants" id="mango">
                         <label class="form-check-label" for="mango">
                             Mango
                         </label>
@@ -79,12 +79,12 @@
     
                     <div class="mb-3 form-group">
                         <label  for="space-of-lands" class="form-label">Space of lands</label>
-                        <input #space type="email" class="form-control" name="space-of-lands" id="space-of-lands" [value]="userData.space">
+                        <input #space type="text" class="form-control" name="space-of-lands" id="space-of-lands" [value]="userData?.space" (input)="cost = +space.value * 250">
                     </div>
     
                     <div class="mb-3 form-group">
                         <label  for="total-cost" class="form-label">Total cost</label>
-                        <input type="text" class="form-control" name="total-cost" id="total-cost" [(ngModel)]="cost">
+                        <input type="text" class="form-control" name="total-cost" id="total-cost" [(ngModel)]="cost" readonly>
                     </div>
     
                     <div class="mb-3 form-group">

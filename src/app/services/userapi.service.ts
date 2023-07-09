@@ -38,7 +38,10 @@ return this.http.post(`${this.api}register`, Data)
     return this.http.post("https://localhost:44371/User", newUser);
   }
   editProfile(editedUser: any){
-    return this.http.post("http://localhost:3000/user", editedUser);
+    return this.http.put("https://localhost:44371/User", editedUser);
+  }
+  getUser(){
+    return this.http.get("https://localhost:44371/User/1");
   }
   review(newReview: any){
     return this.http.post("https://localhost:44371/Reviews", newReview);

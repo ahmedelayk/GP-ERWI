@@ -29,6 +29,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { environment } from 'src/environments/environment';
+// import { AngularFireApp } from '@angular/fire/app';
 
 @NgModule({
   declarations: [
@@ -68,9 +69,10 @@ import { environment } from 'src/environments/environment';
         innerStrokeWidth: 8,
         outerStrokeColor: "#78C000",
         innerStrokeColor: "#C7E596",
-      })
+      }),
   ],
   providers: [
+    
     {
       provide:HTTP_INTERCEPTORS , useClass:AuthInterceptor, multi:true
     }

@@ -50,6 +50,7 @@ console.log(this.MyData);
     )
   }
   LogOutHandler(){
+    this.router.navigate(['/']);
     this.user.LogOutApi().subscribe(
       (res)=>{
         console.log("LogOut Successfully");

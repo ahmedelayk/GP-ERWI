@@ -8,6 +8,8 @@ aside {
     padding: 20px;
     height: calc(100vh - 57px);
     width: 20%;
+    transition: .4s;
+    position: relative;
 }
 
 aside .links li {
@@ -29,6 +31,7 @@ aside .links li a:hover {
 
 .chat {
     background-color: darkslategray;
+    height: calc(100vh - 56px);
 }
 
 /* Gloabal */
@@ -206,3 +209,22 @@ a {
 }
 
 /* End Profile Settings */
+
+
+.show-sidebar {
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    /* border-radius: 8px; */
+    display: block;
+    height: calc(100vh - 57px);
+}
+.hide-sidebar {
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

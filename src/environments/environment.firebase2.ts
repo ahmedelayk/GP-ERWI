@@ -1,3 +1,5 @@
+import { initializeApp } from "@angular/fire/app";
+
 export const environment = {
     production: false,
     firebase: {
@@ -11,3 +13,5 @@ export const environment = {
         measurementId: "G-K31TMT6D21"
     }
   };
+
+//   export const app2 = initializeApp(environment.firebase);
